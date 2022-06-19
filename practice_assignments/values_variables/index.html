@@ -13,17 +13,25 @@
     </head>
     <body>
         <h1> Udemy Assignment 1 - Values and Variables</h1>
-        <div class="standing-icon" style="--accent-color: #00C3C8"><i class="fa-solid
-                fa-arrow-up-right-dots"></i></div><div><p id="population"></p></div>
+        <div class="icon_wrapper" onclick="showAndHideContinent()">
+        <div class="standing-icon" style="--accent-color: #00C3C8">
+            <i id="population_trigger" onclick="change_html(continent_trigger)"
+                class="fa-solid
+                fa-arrow-up-right-dots"></i></div><div><p id="population"></p>POPULATION</div>
+                </div>
+                <div class="icon_wrapper">
         <div class="standing-icon" style="--accent-color: #03A5B3"><i
                 class="fa-brands fa-font-awesome"></i></div><div><p
-                id="country"></p></div>
+                id="country">COUNTRY</p></div>
+                </div>
+                <div class="icon_wrapper">
         <div class="standing-icon" style="--accent-color: #2091A4"><i
+                id="continent_trigger"
                 class="fa-solid fa-earth-americas"></i></div><div><p
-                id="continent"></p></div>
+                id="continent">CONTINENT</p></div>
+                </div>
         <script src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
-        <script src="/practice_assignments/values_variables/script.js" async
-            defer></script>
+        <script src="/practice_assignments/values_variables/script.js"></script>
     </body>
 </html>

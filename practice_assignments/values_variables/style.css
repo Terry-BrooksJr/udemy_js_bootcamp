@@ -31,7 +31,11 @@ h1{ text-align: center; width: 100%; font-family: system-ui }
 }
 
 .standing-icon::before, .standing-icon::after { content: ""; position: absolute; z-index: -1 }
-
+/* Font Wrapper */
+.icon_wrapper{
+  text-align: center;
+  color: inherit;
+}
 /* back */
 .standing-icon::after{
   inset: calc(var(--back-size) * -1);
