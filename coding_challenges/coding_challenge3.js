@@ -24,44 +24,55 @@ Bonus2:
 GOOD LUCK 😀
 
 */
-const dolphins1 = [96, 108, 89];
-const koalas1 = [88, 91, 110];
-const dolphins2 = [97, 112, 101];
-const koalas2 = [109, 95, 123];
-const dolphins3 = [97, 112, 101];
-const koalas3 = [109, 95, 106];
+const dolphinsScoreArray1 = [96, 108, 89];
+const koalasScoreArray1 = [88, 91, 110];
+const dolphinsScoreArray2 = [97, 112, 101];
+const koalasScoreArray2 = [109, 95, 123];
+const dolphinsScoreArray3 = [97, 112, 101];
+const koalasScoreArray3 = [109, 95, 106];
 
 
-function determineWinner(team1Score, team2Score) {
-    var t_score1 = team1Score;
-    var t_score2 = team2Score.score;
-    team1Average = (t_score1) => {
+getAverage = (scoreArray) => {
         var sumToBeAveraged = 0;
         for (let value of scoreArray) {
             sumToBeAveraged += value;
         }
-        var avg = sumToBeAveraged / scoreArray.length;
-        return avg;
+        var team1Average = sumToBeAveraged / scoreArray.length;
+        return team1Average;
     };
 
-    team2Average = (t_score2) => {
-        var sumToBeAveraged = 0;
-        for (let value of scoreArray) {
-            sumToBeAveraged += value;
-        }
-        var avg = sumToBeAveraged / scoreArray.length;
-        return avg;
-    };
-    /*
-    if (team1Average > team2Average) {
-        console.log(`The Winner is Team 1 Wins`);
-    } if (team1Average === team2Average) {
-        console.log('It is a Tie-Game');
-    } if (team2Average > team2Average){
-        console.log(`The Winner is Team 2 Wins`);
+determineWinner = (match) => {
+    team1Score = match[0].score;
+    team2Score = match[1].score;
+    if (team1Score > team2Score){
+    return `(Drumroll..The Winner is ${match[0].team}`;
     }
-}
-*/
-determineWinner(dolphins1, koalas1);
-determineWinner(dolphins2, koalas2);
-// determineWinner(dolphins3, koalas3)
+    if (team2Score > team1Score ) {
+        return `(Drumroll..The Winner is ${match[1].team}`;
+    } else {
+        return 'Tie-Game!';
+    }  
+};
+match1 = [{team: "Dolphins", score: getAverage(dolphinsScoreArray1) }, { team: "Koalas", score: getAverage(koalasScoreArray1)}];
+match2 = [{ team: "Dolphins", score: getAverage(dolphinsScoreArray2) }, { team: "Koalas", score: getAverage(koalasScoreArray2)}];
+match3 = [{ team: "Dolphins", score: getAverage(dolphinsScoreArray3) }, { team: "Koalas", score: getAverage(koalasScoreArray3)}];
+
+
+console.log(determineWinner(match1));
+console.log(determineWinner(match2))
+console.log(determineWinner(match3))
+
+
+ console.log(match1[0].score);
+console.log(match1[1].score);
+ console.log(match2[0].score);
+console.log(match2[1].score);
+ console.log(match3[0].score);
+console.log(match3[1].score);
+// if (match1[0].score > match1[1].score){
+//     console.log(`The Winner is ${match1[0].team}`)
+// };
+// console.log(match1[0].score > match1[1].score);
+// console.log(match1[0].score > match1[1].score);
+
+
