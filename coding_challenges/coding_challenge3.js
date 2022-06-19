@@ -45,10 +45,10 @@ determineWinner = (match) => {
     team1Score = match[0].score;
     team2Score = match[1].score;
     if (team1Score > team2Score){
-    return `(Drumroll..The Winner is ${match[0].team}`;
+    return `Drumroll..The Winner is ${match[0].team}`;
     }
     if (team2Score > team1Score ) {
-        return `(Drumroll..The Winner is ${match[1].team}`;
+        return `Drumroll..The Winner is ${match[1].team}`;
     } else {
         return 'Tie-Game!';
     }  
